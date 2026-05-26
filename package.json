@@ -1,0 +1,39 @@
+{
+  "name": "veil-cli",
+  "version": "0.0.1",
+  "description": "Security-first terminal wallet for EVM chains — explain what you sign",
+  "main": "index.js",
+  "bin": {
+    "veil": "./dist/cli.js"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsup src/cli.ts --format esm --target node18 --clean",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "summus.forge",
+  "license": "MIT",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.3.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/ora": "^3.2.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "ora": "^9.4.0",
+    "viem": "^2.51.0"
+  }
+}
