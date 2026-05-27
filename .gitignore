@@ -8,3 +8,5 @@ dist/
 # my temp files
 *.txt
 PLAN.md
+
+.gitignore
