@@ -4,6 +4,9 @@ import { registerHello } from './commands/hello.js';
 import { registerDecode } from './commands/decode.js';
 import { registerConfig } from './commands/config.js';
 import { registerApprovals } from './commands/approvals.js';
+import { registerSimulate } from './commands/simulate.js';
+import { registerRisk } from './commands/risk.js';
+import { registerExplain } from './commands/explain.js';
 
 const program = new Command();
 
@@ -19,5 +22,11 @@ registerDecode(program);
 registerConfig(program);
 
 registerApprovals(program);
+
+registerSimulate(program);
+
+registerRisk(program);
+
+registerExplain(program);
 
 program.parse();

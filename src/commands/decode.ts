@@ -66,8 +66,9 @@ export function registerDecode(program: Command): void {
         calldata = input as `0x${string}`;
       }
 
-      const abi = await loadAbi(contractAddress, chain, apiKey ?? undefined);
-
+      const selector = calldata.slice(0, 10); // '0x' + 4 bytes = 10 chars
+      const abi = await loadAbi(contractAddress, chain, apiKey ?? undefined, selector);
+      
       if (!abi) {
         spinner.fail(chalk.red(`Could not load ABI for ${contractAddress}`));
         console.error(chalk.dim('Tip: veil config set etherscan-key <key>'));
