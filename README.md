@@ -12,8 +12,25 @@ before you sign anything.
 
 ## Install
 
+> **Note:** `veil-cli` is not yet published to npm. Install from source:
+
 ```bash
-npm install -g veil-cli
+git clone https://github.com/summusforge-lab/veil-cli.git
+cd veil-cli
+pnpm install
+pnpm build
+```
+
+Then run commands via:
+
+```bash
+node dist/cli.js <command>
+```
+
+Or during development (no build needed):
+
+```bash
+pnpm dev -- <command>
 ```
 
 Requires [Foundry](https://getfoundry.sh) for `veil simulate`.
@@ -58,12 +75,13 @@ veil simulate 0xabc123... --chain arbitrum
 ```
 
 `tx.json` format:
+
 ```json
 {
-  "from":  "0xYourAddress",
-  "to":    "0xContractAddress",
+  "from": "0xYourAddress",
+  "to": "0xContractAddress",
   "value": "0xde0b6b3a7640000",
-  "data":  "0xa9059cbb..."
+  "data": "0xa9059cbb..."
 }
 ```
 

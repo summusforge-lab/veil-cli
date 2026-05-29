@@ -15,13 +15,7 @@
   "keywords": [],
   "author": "summus.forge",
   "license": "MIT",
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^11.3.0",
-      "onFail": "download"
-    }
-  },
+  "packageManager": "pnpm@11.3.0",
   "type": "module",
   "devDependencies": {
     "@types/node": "^25.9.1",
