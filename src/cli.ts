@@ -10,6 +10,7 @@ import { registerExplain } from './commands/explain.js';
 import { registerLogin } from './commands/login.js';
 import { registerBalance } from './commands/balance.js';
 import { registerAddress } from './commands/address.js';
+import { registerWallet } from './commands/wallet.js';
 
 const program = new Command();
 
@@ -36,5 +37,6 @@ registerLogin(program);
 
 registerBalance(program);
 registerAddress(program);
+registerWallet(program);
 
 program.parse();
